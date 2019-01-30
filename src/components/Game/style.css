@@ -1,0 +1,13 @@
+#game-board {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.tile-wrap {
+    display: inline-block;
+}
+
+#score-card {
+    text-align: center;
+    font-weight: bold;
+}

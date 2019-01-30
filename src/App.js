@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Game from "./components/Game/Game"
+
+const styles = {
+  heading: {
+    textAlign: "center"
+  },
+  description: {
+    textAlign: "center"
+  }
+};
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <>
+      <h1 id="title" style={styles.heading}>Harry Potter Memory Game</h1>
+      <p style={styles.description}>Click a pic to earn a point, but click it again and you lose.</p>
+      <Game />
+      </>
     );
   }
 }
