@@ -5,6 +5,13 @@
 
 .tile-wrap {
     display: inline-block;
+    opacity: 1;
+    transition: .7s opacity;
+}
+
+.fade {
+    opacity: 0;   
+    transition: 0; 
 }
 
 #score-card {

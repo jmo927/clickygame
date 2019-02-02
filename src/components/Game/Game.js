@@ -39,6 +39,7 @@ class Game extends Component {
                 if (!index.wasClicked) {
                     index.wasClicked = true;
                     document.getElementById("last-guess").innerHTML = " | Correct!"
+                    document.getElementById("last-guess").style = "color: black"
                     this.setState({ count: this.state.count + 1 });
                 } else {
                     this.gameReset();
@@ -51,9 +52,11 @@ class Game extends Component {
 
     gameReset = () => {
         newData.forEach(index => {
-            index.wasClicked = false;
+            index.wasClicked = false;            
         })
-        document.getElementById("last-guess").innerHTML = " | Ya Wrong!"
+        document.getElementById("last-guess").innerHTML = " | Ya Wrong!  Start Again";
+        document.getElementById("last-guess").style = "color: White;"
+
         this.setState({ count: 0 })
         if (this.state.highScore < this.state.count) {
             this.setState({ highScore: this.state.count })
