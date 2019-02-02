@@ -7,6 +7,6 @@
 }
 
 .tile:hover {
-    border-color: grey;
+    border-color: crimson;
     transform: scale(1.1);
 }

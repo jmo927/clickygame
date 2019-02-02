@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Tiles from '../Tiles/Tiles';
 import data from "./data.json";
 import "./style.css";
+import ScoreCard from "../ScoreCard/ScoreCard"
 
 const newData = data;
 
@@ -67,8 +68,9 @@ class Game extends Component {
     render() {
         return (
             <>
-                <div id="score-card">Current Score: {this.state.count} | High Score: {this.state.highScore} <span id="last-guess"></span></div>
-                <hr></hr>
+                {/* <div id="score-card">Current Score: {this.state.count} | High Score: {this.state.highScore} <span id="last-guess"></span></div>
+                <hr></hr> */}
+                <ScoreCard current={this.state.count} high={this.state.highScore} />
                 <div id="game-board">
                     {dataShuffle(data)
                         .map((index) => <div className="tile-wrap" data-id={index.id} onClick={this.checkState}><Tiles image={index.image}
